@@ -1,0 +1,36 @@
+{
+  "name": "bootstrap-redmine",
+  "homepage": "https://github.com/pepeul1191/dashboard-redmine",
+  "authors": [
+    "Pepe Valdivia <jvaldivia@softweb.pe>"
+  ],
+  "description": "Dashboard Bootstrap Redmine style",
+  "main": "",
+  "keywords": [
+    "redmine",
+    "mootools",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "bootstrap": "boostrap#^3.3.7",
+    "font-awesome": "^4.6.3"
+  },
+  "_release": "96eaa7d2fa",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "96eaa7d2fa1440a74d1bf161f2003eb0f87b83e6"
+  },
+  "_source": "https://github.com/pepeul1191/dashboard-redmine.git",
+  "_target": "*",
+  "_originalSource": "dashboard-redmine-style"
+}
