@@ -81,7 +81,7 @@ var MostrarSubtitulos = new Class({
 			];
 
 			var array_extra_data = [
-				{tipo: "label", llave: "_id_modulo", id : "id_modulo"}
+				{tipo: "label", llave: "id_modulo", id : "id_modulo"}
 			];
 
 			var ajax_subtitulos = new AjaxPython(); 
@@ -151,7 +151,7 @@ var MostrarItems = new Class({
 			];
 
 			var array_extra_data = [
-				{tipo: "label", llave: "_id_subtitulo", id : "id_subtitulo"}
+				{tipo: "label", llave: "id_subtitulo", id : "id_subtitulo"}
 			];
 			
 			var ajax_dao_subtitulos = new AjaxPython(); 
