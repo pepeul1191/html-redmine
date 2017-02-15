@@ -23,7 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-redmine": "dashboard-redmine-style#*",
-    "swp-plugins": "*"
+      "bootstrap-redmine": "*",
+      "swp-plugins": "*",
+      "qunit": "^2.1.1"
   }
 }
