@@ -1,20 +1,20 @@
 var array_json_th = [
 	{titulo:"id", index: "id", estilos:"width: 10px; display:none;"},
 	{titulo:"Nombre",index:"nombre",estilos:"width: 90px;"},
-	{titulo:"Url",index:"url",estilos:"width: 120px;"},
+	{titulo:"Url",index:"url",estilos:"width: 90px;"},
 	{titulo:"Botones",index:"NA",estilos:"width: 10px;"}
 ];
 
 var array_json_td = [
 	{tipo:"label_id",estilos:"color: blue; display:none", index:"id", edicion:""},
 	{tipo:"text",estilos:"width:90px;", index:"nombre", edicion:""},
-	{tipo:"text",estilos:"width:120px;", index:"url", edicion:""},
+	{tipo:"text",estilos:"width:90px;", index:"url", edicion:""},
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 
 var array_json_btn_td = [
-	{clase:"fa fa-chevron-right",url:"#",alt:"Gestionar subtitulos",estilos:"padding-left: 32px;", operacion:"MostrarSubtitulos"},
-	{clase:"fa fa-times",url:"#",alt:"Eliminar módulo",estilos:"padding-left: 32px;", operacion:"QuitarFila"}
+	{clase:"fa fa-chevron-right",url:"#",alt:"Gestionar subtitulos",estilos:"padding-left: 20px;", operacion:"MostrarSubtitulos"},
+	{clase:"fa fa-times",url:"#",alt:"Eliminar módulo",estilos:"padding-left: 10px;", operacion:"QuitarFila"}
 ]; 
 
 var array_json_btn = [
@@ -129,20 +129,20 @@ var MostrarItems = new Class({
 
         	var array_json_th = [
 				{titulo:"id", index: "id", estilos:"width: 10px; display:none;"},
-				{titulo:"Nombre",index:"nombre",estilos:"width: 40%;"},
-				{titulo:"Url",index:"url",estilos:"width: 40%;"},
-				{titulo:"Botones",index:"NA",estilos:"width: 20%;"}
+				{titulo:"Nombre",index:"nombre",estilos:"width: 90px;"},
+				{titulo:"Url",index:"url",estilos:"width: 100px;"},
+				{titulo:"Botones",index:"NA",estilos:"width: 20px;"}
 			];
 
 			var array_json_td = [
 				{tipo:"label_id",estilos:"color: blue; display:none;", index:"id", edicion:""},
-				{tipo:"text",estilos:"width:100%;", index:"nombre", edicion:""},
-				{tipo:"text",estilos:"width:100%;", index:"url", edicion:""},
+				{tipo:"text",estilos:"width:90px;", index:"nombre", edicion:""},
+				{tipo:"text",estilos:"width:100px;", index:"url", edicion:""},
 				{tipo:"botones", index:"botones", edicion:"true"}
 			];
 
 			var array_json_btn_td = [
-				{clase:"fa fa-times",url:"#",alt:"Quitar Fila",estilos:"padding-left: 33px;", operacion:"QuitarFila"}
+				{clase:"fa fa-times",url:"#",alt:"Quitar Fila",estilos:"padding-left: 27px;", operacion:"QuitarFila"}
 			]; 
 
 			var array_json_btn = [

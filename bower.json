@@ -23,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-      "bootstrap-redmine": "*",
+      "unify-pp": "*",
       "swp-plugins": "*",
       "qunit": "^2.1.1"
   }
