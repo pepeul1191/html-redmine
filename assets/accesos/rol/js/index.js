@@ -104,10 +104,35 @@ var VerPermisos = new Class({
     }
 });
 
-$(document).on("click", ".mootools", function() {
+ $(document).on("click", ".mootools", function() {
     var objeto = eval(this.get("objeto"));
-    var eslabon_1 = new VerPermisos();
-    var operacion = this.get("operacion"); console.log(operacion);
+    var eslabon_1 = new AgregarFila();
+    var eslabon_2 = new GuardarTabla();
+    var eslabon_3 = new QuitarFila();
+    var eslabon_4 = new EditarInputCheck();
+    var eslabon_5 = new VerPermisos();
+
+    eslabon_1.SetearSiguienteInstancia(eslabon_2);
+    eslabon_2.SetearSiguienteInstancia(eslabon_3);
+    eslabon_3.SetearSiguienteInstancia(eslabon_4);
+    eslabon_4.SetearSiguienteInstancia(eslabon_5);
+
+    var operacion = this.get("operacion"); //console.log(operacion);
 
     eslabon_1.EjecutarOperacion(operacion, $(this), objeto);
 });
+
+$(document).on("keydown", ".mootools", function(event) {
+  	var objeto = eval(this.get("objeto"));
+  	var eslabon_1 = new EditarInputText();
+  	var operacion = this.get("operacion"); //console.log(operacion);
+   eslabon_1.EjecutarOperacion(operacion, $(event.currentTarget), objeto);
+});
+/*
+$(document).on("change", ".mootools", function(event) {
+  	var objeto = eval(this.get("objeto"));
+  	var eslabon_1 = new EditarInputCheck();
+  	var operacion = this.get("operacion"); //console.log(operacion);
+   eslabon_1.EjecutarOperacion(operacion, $(event.currentTarget), objeto);
+});
+*/
