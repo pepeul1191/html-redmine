@@ -22,16 +22,21 @@ var array_json_btn = [
 ];
 
 var ajax_dao_tipo_activos = new AjaxPython(); 
-ajax_dao_tipo_activos.Constructor("GET", BASE_URL + "accesos/permiso/listar", "", false);
+ajax_dao_tipo_activos.Constructor("GET", BASE_URL + "accesos/permiso/listar/" + $("#sistema_id").html(), "", false);
 
 var tablaPermiso = new Grid();
+
+var array_extra_data_permiso = [
+	{tipo: "label", llave: "sistema_id", id : "sistema_id"}
+];
 
 tablaPermiso.SetTableId("tablaPermiso");
 tablaPermiso.SetTableObj("tablaPermiso");
 tablaPermiso.SetTableHeader(array_json_th);
 tablaPermiso.SetTableBody(array_json_td, array_json_btn_td, ajax_dao_tipo_activos);
 tablaPermiso.SetTableFooter(array_json_btn, false);
-tablaPermiso.SetLabelMensaje("#txtMensajeRpta");
+tablaPermiso.SetLabelMensaje("#txtMensajeRptaModal");
+tablaPermiso.SetExtraData(array_extra_data_permiso);
 tablaPermiso.SetURLGuardar(BASE_URL + "accesos/permiso/guardar");
 
 tablaPermiso.MostrarTable();
