@@ -21,17 +21,22 @@ var array_json_btn = [
 ];
 
 var ajax_dao_tipo_activos = new AjaxPython(); 
-ajax_dao_tipo_activos.Constructor("GET", BASE_URL + "accesos/rol/listar", "", false);
+ajax_dao_tipo_activos.Constructor("GET", BASE_URL + "accesos/rol/listar/" + $("#sistema_id").html(), "", false);
 
 var tablaRoles = new Grid();
 var tablaPermisos = new Grid();
+
+var array_extra_data_rol = [
+	{tipo: "label", llave: "sistema_id", id : "sistema_id"}
+];
 
 tablaRoles.SetTableId("tablaRoles");
 tablaRoles.SetTableObj("tablaRoles");
 tablaRoles.SetTableHeader(array_json_th);
 tablaRoles.SetTableBody(array_json_td, array_json_btn_td, ajax_dao_tipo_activos);
 tablaRoles.SetTableFooter(array_json_btn, false);
-tablaRoles.SetLabelMensaje("#txtMensajeRpta");
+tablaRoles.SetLabelMensaje("#txtMensajeRptaModal");
+tablaRoles.SetExtraData(array_extra_data_rol);
 tablaRoles.SetURLGuardar(BASE_URL + "accesos/rol/guardar");
 
 tablaRoles.MostrarTable();
@@ -79,7 +84,7 @@ var VerPermisos = new Class({
 			];
 			
 			var ajax_dao_permisos = new AjaxPython(); 
-			ajax_dao_permisos.Constructor("GET", BASE_URL + "accesos/permiso/listar_asociados/" + id_rol, "", false);
+			ajax_dao_permisos.Constructor("GET", BASE_URL + "accesos/permiso/listar_asociados/" + $("#sistema_id").html() + "/" +  id_rol, "", false);
 
 			tablaPermisos.SetTableId("tablaPermisos");
 			tablaPermisos.SetTableObj("tablaPermisos");
@@ -88,7 +93,7 @@ var VerPermisos = new Class({
 			tablaPermisos.SetTableFooter(array_json_btn, false);
 			tablaPermisos.SetURLGuardar(BASE_URL + "accesos/rol/asociar_permisos");
 			tablaPermisos.SetExtraData(array_extra_data);
-			tablaPermisos.SetLabelMensaje("#txtMensajeRpta");
+			tablaPermisos.SetLabelMensaje("#txtMensajeRptaModal");
 
 			$("#id_rol").html(id_rol);
            
