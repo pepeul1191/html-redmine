@@ -151,14 +151,14 @@ var MostrarDistritos = new Class({
 			];
 			
 			var ajax_dao_subtitulos = new AjaxPython(); 
-			ajax_dao_subtitulos.Constructor("GET", BASE_URL + "maestros/provincias/" + provincia_id, "", false);
+			ajax_dao_subtitulos.Constructor("GET", BASE_URL + "maestros/distritos/" + provincia_id, "", false);
 
 			tablaDistritos.SetTableId("tablaDistritos");
 			tablaDistritos.SetTableObj("tablaDistritos");
 			tablaDistritos.SetTableHeader(array_json_th);
 			tablaDistritos.SetTableBody(array_json_td, array_json_btn_td, ajax_dao_subtitulos);
 			tablaDistritos.SetTableFooter(array_json_btn, false);
-			tablaDistritos.SetURLGuardar(BASE_URL + "maestros/provincia/guardar/");
+			tablaDistritos.SetURLGuardar(BASE_URL + "maestros/distrito/guardar/");
 			tablaDistritos.SetExtraData(array_extra_data);
 
 			$("#provincia_id").html(provincia_id);
