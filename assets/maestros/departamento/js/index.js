@@ -186,3 +186,13 @@ $(document).on("click", ".mootools", function() {
 
     eslabon_1.EjecutarOperacion(operacion, $(this), objeto);
 });
+
+var autocompleteDistritos = new Autocomplete();
+
+autocompleteDistritos.SetUrl(BASE_URL + "maestros/distrito/buscar/");
+autocompleteDistritos.SetUlSugerencia("autoDistrito");
+autocompleteDistritos.SetDestinoIdSugerencia("idDistrito");
+autocompleteDistritos.SetNombreObjeto("autocompleteDistritos");
+autocompleteDistritos.SetDestinoValorSugerencia("txtDistrito");
+autocompleteDistritos.SetIndices("id", "nombre");
+autocompleteDistritos.SetFuncionAdicional("");
