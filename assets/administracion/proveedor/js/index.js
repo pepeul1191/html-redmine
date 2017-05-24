@@ -1,21 +1,24 @@
 var array_json_th = [
 	{titulo:"id", index: "id", estilos:"width: 10px; display:none;"},
-	{titulo:"Nombre",index:"nombre",estilos:"width: 120px;"},
-	{titulo:"Distrito",index:"distrito_id",estilos:"width: 280px;"},
-        {titulo:"Dirección",index:"direccion",estilos:"width: 480px;"},
+	{titulo:"Razón Social",index:"razon_social",estilos:"width: 250px;"},
+	{titulo:"RUC",index:"ruc",estilos:"width: 120px;"},
+	{titulo:"Distrito",index:"distrito",estilos:"width: 280px;"},
+    {titulo:"Dirección",index:"direccion",estilos:"width: 280px;"},
 	{titulo:"Botones",index:"NA",estilos:"width: 10px;"}
 ];
 
 var array_json_td = [
 	{tipo:"label_id",estilos:"color: blue; display:none", index:"id", edicion:""},
-	{tipo:"text",estilos:"width:120px;", index:"nombre", edicion:""},
-	{tipo:"autocomplete",estilos:"width:280px;", index:"distrito", edicion:"",  url: BASE_URL  + "maestros/distrito/buscar/", llave: "id", valor: "nombre", formato_carga:{llave: "distrito_id", valor: "distrito"}},
-        {tipo:"text",estilos:"width:480px;", index:"direccion", edicion:""},
+	{tipo:"label",estilos:"width:250px;", index:"razon_social", edicion:""},
+	{tipo:"label",estilos:"width:120px;", index:"ruc", edicion:""},
+	{tipo:"label",estilos:"width:280px;", index:"distrito", edicion:""},
+	{tipo:"label",estilos:"width:280px;", index:"direccion", edicion:""},
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 
 var array_json_btn_td = [
-	{clase:"fa fa-times",url:"#",alt:"Eliminar módulo",estilos:"padding-left: 25px;", operacion:"QuitarFila"}
+	{clase:"fa fa-pencil",url:"#",alt:"Editar proveedor",estilos:"padding-left: 20px;", operacion:"LinkFila", link: BASE_URL + "administracion/proveedor/editar/", href: true}, 
+	{clase:"fa fa-search",url:"#",alt:"Ver proveedor",estilos:"padding-left: 25px;", operacion:"LinkFila", link: BASE_URL + "administracion/proveedor/ver/", href: true}
 ]; 
 
 var array_json_btn = [
