@@ -54,3 +54,20 @@ $("#upload_file_dni").on("click", function(event){
     );
     event.preventDefault();
 });
+
+$("#upload_file_ruc").on("click", function(event){
+    $("#input_file_ruc").upload(
+        BASE_URL + "administracion/proveedor/subir_ruc",
+        {
+            nombre : "Imagen 1 nombre",
+            descripcion : "Imagen 1 descripcion"
+        }, 
+        function(success){
+            console.log(success);
+            $("#imagen_ruc_id").html(success);
+            event.preventDefault();
+        },  
+        $("#progbar_ruc")
+    );
+    event.preventDefault();
+});
