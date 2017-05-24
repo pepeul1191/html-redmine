@@ -8,7 +8,7 @@ autocompleteDistritos.SetDestinoValorSugerencia("txtDistrito");
 autocompleteDistritos.SetIndices("id", "nombre");
 autocompleteDistritos.SetFuncionAdicional("");
 
-$( "#btnGuardarEmpresa" ).click(function() {
+$( "#btnGuardarEmpresa" ).click(function(event) {
     var proveedor = new Object();
     proveedor.id = $("#idProveedor").html();
     proveedor.razon_social= $("#txtRazonSocial").val();
@@ -34,4 +34,23 @@ $( "#btnGuardarEmpresa" ).click(function() {
        $("#txtMensajeRptaProveedor").removeClass("oculto");
        $("#txtMensajeRptaProveedor").addClass("color-rojo");
     }
+
+    event.preventDefault();
+});
+
+$("#upload_file_dni").on("click", function(event){
+    $("#input_file_dni").upload(
+        BASE_URL + "administracion/proveedor/subir_dni",
+        {
+            nombre : "Imagen 1 nombre",
+            descripcion : "Imagen 1 descripcion"
+        }, 
+        function(success){
+            console.log(success);
+            $("#imagen_dni_id").html(success);
+            event.preventDefault();
+        },  
+        $("#progbar_dni")
+    );
+    event.preventDefault();
 });

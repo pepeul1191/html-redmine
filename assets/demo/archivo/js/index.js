@@ -82,8 +82,7 @@ $( "#triggerUploadFile1" ).click(function() {
   	$( "#uploadFile1" ).click();
 });
 
-$("#uploadFile1").on("click", 
-	function(){
+$("#uploadFile1").on("click", function(event){
 		$("#inputFile1").upload(
 			BASE_URL + "demo/archivo/upload",
 				//"http://localhost:3001/archivo/recibir",
@@ -95,6 +94,7 @@ $("#uploadFile1").on("click",
 				alert("DONE");
 				console.log(success);
 				$("#lblIdImagen1").html(success);
+				event.preventDefault();
 		},	$("#prog1")
 	);
 });
